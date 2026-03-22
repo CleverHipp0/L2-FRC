@@ -130,8 +130,6 @@ def currency(x):
 
 
 # Main routine.
-# For testing.
-
 # Get the quantity being made.
 quantity = int_checker("How many are being made? ", int)
 
@@ -151,13 +149,15 @@ fixed_expenses = get_expense("Fixed")
 # Table variable expenses
 variable_pandas = variable_expenses[0]
 variable_subtotal = variable_expenses[1]
-print(f'{statement_generator("Variable Expenses", "=")}\n', variable_pandas)
+print(f'{statement_generator("Variable Expenses", "=")}\n')
+print(variable_pandas)
 
 # Table fixed expenses
 fixed_pandas = fixed_expenses[0]
 fixed_subtotal = fixed_expenses[1]
 if fixed_pandas != "":
-    print(f'{statement_generator("Fixed Expenses", "=")}\n', fixed_pandas)
+    print(f'{statement_generator("Fixed Expenses", "=")}')
+    print(fixed_pandas)
 
 print(f'''
 Variable subtotal: {variable_subtotal:.2f}
